@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Thisishowwemove : MonoBehaviour
 {
+    Vector3 velocity;
+    float gravity = -9.81f;
+
     public float moveSpeed = 5f;
     public Transform cameraTransform;
 
@@ -28,6 +31,10 @@ public class Thisishowwemove : MonoBehaviour
         Vector3 moveDirection = forward * vertical + right * horizontal;
 
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
+
     }
 
 }
