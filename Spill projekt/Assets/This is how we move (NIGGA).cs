@@ -3,7 +3,7 @@ using UnityEngine;
 public class Thisishowwemove : MonoBehaviour
 {
     Vector3 velocity;
-    float gravity = -9.81f;
+    public float gravity = -1f;
 
     public float moveSpeed = 5f;
     public Transform cameraTransform;
